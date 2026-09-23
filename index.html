@@ -3,79 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google</title>
+    <title>New Tab</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Top right: Gmail, Images, apps menu, profile -->
     <header>
         <nav>
-            <ul>
-                <li>
-                    <a href=#>About</a>
-                </li>
-                <li>
-                    <a href=#>Store</a>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <a class="small-text" href=#>Gmail</a>
-                </li>
-                <li>
-                    <a class="small-text" href=#>Images</a>
-                </li>
-                <li class="menu-bg">
-                    <img type="button" class="menu-button" src="image/menuIcon.png" alt="menu button">
-
-                </li>
-                <li class="profile-picture">
-                    <img class="profile-pic" src="image/profilepic.jpg" alt="profile pic">
-
-                </li>
-            </ul>
+            <a href="https://mail.google.com">Gmail</a>
+            <a href="https://www.google.com/imghp">Images</a>
+            <button type="button" class="icon-button" aria-label="Google apps">
+                <img src="image/apps.svg" alt="">
+            </button>
+            <button type="button" class="profile" aria-label="Google Account">
+                <img src="image/profilepic.jpg" alt="">
+            </button>
         </nav>
     </header>
-    <section class="search-wrapper">
-        <img class="logo" src="image/google.png" alt="google logo">
-        <form action="">
-                        
-            <img class="search-png" src="image/search.png" alt="search icon">
 
-            <img class="mic-png" src="image/mic.png" alt="mic voice icon">
+    <main>
+        <img class="logo" src="image/google.png" alt="Google">
 
-             <input type="text"> 
-             <div class="buttons">
-                <button type="button">Google Search</button>
-                <button type="button">I'm Feeling Lucky</button> 
+        <!-- Search bar: sends the query to real Google search -->
+        <form class="search-bar" action="https://www.google.com/search">
+            <button type="button" class="icon-button" aria-label="Add files">
+                <img src="image/plus.svg" alt="">
+            </button>
 
-            </div>
+            <input type="text" name="q" placeholder="Ask Google" aria-label="Search">
+
+            <button type="button" class="icon-button" aria-label="Search by voice">
+                <img src="image/mic-dark.svg" alt="">
+            </button>
+            <button type="button" class="icon-button lens" aria-label="Search by image">
+                <img src="image/lens-dark.svg" alt="">
+            </button>
+
+            <!-- AI Mode chip: animated gradient border lives in style.css -->
+            <button type="submit" class="ai-mode" formaction="https://www.google.com/search?udm=50">
+                <img src="image/ai-mode.svg" alt="">
+                <span>AI Mode</span>
+            </button>
         </form>
 
-    </section>
-    <footer>
-        <div class="panel">
-            <p>United Kingdom</p>
+        <!-- Suggestion cards -->
+        <div class="cards">
+            <a class="card" href="https://www.google.com/search?udm=50">
+                <img src="image/ai-mode.svg" alt="">
+                <span>
+                    <strong>Do more with AI Mode</strong>
+                    <small>Create, summarize, plan</small>
+                </span>
+            </a>
+            <a class="card" href="https://gemini.google.com">
+                <span class="emoji" aria-hidden="true">🍌</span>
+                <span>
+                    <strong>Create images</strong>
+                    <small>Reimagine, illustrate, edit</small>
+                </span>
+            </a>
         </div>
-        <div class="panel">
-            <ul>
-                <li><a href=#>Advertising</a></li>
-                <li><a href=#>Business</a></li>
-                <li><a href=#>Works</a></li>
-            </ul>
 
-        
-          <div class="carbon">
-            <img class="leaf" src="image/leaf.svg" alt="leaf svg">
-            <a href=#>Carbon neutral since 2007</a>
+        <!-- Shortcuts -->
+        <ul class="shortcuts">
+            <li>
+                <a href="https://chromewebstore.google.com">
+                    <span class="tile"><img src="image/webstore.svg" alt=""></span>
+                    <span class="label">Web Store</span>
+                </a>
+                <button type="button" class="more" aria-label="More actions for Web Store">
+                    <img src="image/more.svg" alt="">
+                </button>
+            </li>
+            <li>
+                <a href="https://web.whatsapp.com">
+                    <span class="tile"><img src="image/whatsapp.svg" alt=""></span>
+                    <span class="label">https://web.whatsapp.com</span>
+                </a>
+                <button type="button" class="more" aria-label="More actions for https://web.whatsapp.com">
+                    <img src="image/more.svg" alt="">
+                </button>
+            </li>
+            <li>
+                <a href="https://github.com">
+                    <span class="tile"><img src="image/github.svg" alt=""></span>
+                    <span class="label">https://github.com</span>
+                </a>
+                <button type="button" class="more" aria-label="More actions for https://github.com">
+                    <img src="image/more.svg" alt="">
+                </button>
+            </li>
+            <li>
+                <a href="https://www.youtube.com">
+                    <span class="tile"><img src="image/youtube.svg" alt=""></span>
+                    <span class="label">https://www.youtube.com</span>
+                </a>
+                <button type="button" class="more" aria-label="More actions for https://www.youtube.com">
+                    <img src="image/more.svg" alt="">
+                </button>
+            </li>
+            <li>
+                <a href="https://chatgpt.com">
+                    <span class="tile"><img src="image/chatgpt.svg" alt=""></span>
+                    <span class="label">chatgpt</span>
+                </a>
+                <button type="button" class="more" aria-label="More actions for chatgpt">
+                    <img src="image/more.svg" alt="">
+                </button>
+            </li>
+            <li>
+                <a href="https://meet.google.com">
+                    <span class="tile"><img src="image/meet.svg" alt=""></span>
+                    <span class="label">google meets</span>
+                </a>
+                <button type="button" class="more" aria-label="More actions for google meets">
+                    <img src="image/more.svg" alt="">
+                </button>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="tile"><img src="image/show-more.svg" alt=""></span>
+                    <span class="label">Show more</span>
+                </a>
+            </li>
+        </ul>
+    </main>
 
-          </div>
-          <ul class="right">
-            <li><a href=#>privacy</a></li>
-            <li><a href=#>Terms</a></li>
-            <li><a href=#>Settings</a></li>
-
-          </ul>
-        </div>
-    </footer>
+    <button type="button" class="customize">
+        <img src="image/pencil.svg" alt="">
+        Customize Chrome
+    </button>
 </body>
 </html>
